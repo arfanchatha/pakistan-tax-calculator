@@ -32,7 +32,7 @@ const TexCalculatorForm = ({
             }
           />
           <div
-            className="btn btn-secondary input-group-text"
+            className="btn btn-secondary input-group-text bg-primary"
             onClick={handleSubmit}
           >
             Calculate
