@@ -16,14 +16,13 @@ const TaxRatesModal = ({ selectedTaxYear, slabIndex, toggleModal }) => {
           >
             {/* {index === slabIndex && <strong>Your current tax slab is </strong>} */}
             <span>
-              {index === slabIndex ? (
+              {index === slabIndex && (
                 <strong>
-                  <u className="text-dark">Your current tax slab is &gt; </u>{" "}
+                  <u className="text-dark">Your current tax slab is &gt; </u>
+                  {"  "}
                 </strong>
-              ) : (
-                <span>{index}): </span>
               )}
-              <strong>{key}</strong>
+              <strong> {key}</strong>
             </span>
             &rarr; <span>{value}</span>
           </p>
