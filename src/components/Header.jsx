@@ -2,9 +2,9 @@ import DarkModeToggle from "./DarkModeToggle";
 
 function Header({ selectedYear }) {
   return (
-    <div className="container-fluid">
+    <div className="container py-3">
       <div className="row  text-center text-md-start">
-        <div className="col-lg-4 col-md-2 col-sm-12">
+        <div className="col-lg-3 col-md-2 col-sm-12">
           <img
             src="pakistan.png"
             alt="Pakistan Flag"
@@ -12,7 +12,7 @@ function Header({ selectedYear }) {
             height={100}
           />
         </div>
-        <div className="col-lg-6 col-md-6 col-sm-12 my-auto">
+        <div className="col-lg-7 col-md-6 col-sm-12 my-auto">
           <h1>Calculate Tax on Your Salary</h1>
           <p>
             Calculate income tax on salary as per Govt of Pakistan federal
