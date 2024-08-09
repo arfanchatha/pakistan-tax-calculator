@@ -1,3 +1,4 @@
+import "./ScreenSizes.css";
 import { useState } from "react";
 import Header from "./Header";
 import useTaxCalculation from "../hooks/useTaxCalculation";
@@ -86,7 +87,7 @@ function TaxCalculation() {
           </div>
         </div>
 
-        <div className="d-md-flex d-sm-flex justify-content-between">
+        <div className="d-xl-flex justify-content-between">
           <div className="border border-success rounded my-3 mx-1 p-3 w-100">
             <div className="text-center mb-2">
               <h1>Tax year ended {selectedTaxYear}</h1>
@@ -116,12 +117,13 @@ function TaxCalculation() {
                   annualSalary={annualSalary}
                   totalTax={totalTax}
                 />
+                {/* <Example /> */}
               </div>
             </div>
           </div>
 
           <div className="border border-success rounded d-flex justify-content-center align-items-center my-3 mx-1 p-3 w-100">
-            <div>
+            <div className="w-100">
               <h2 className="text-center">Comparison to other years</h2>
               {salary ? (
                 <TaxComparisonTable
