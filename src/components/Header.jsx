@@ -1,4 +1,6 @@
-function Header({ selectedYear }) {
+import DarkModeToggle from "./DarkModeToggle";
+
+function Header() {
   return (
     <div className="row bg-light text-center text-md-start py-3">
       <div className="col-lg-4 col-md-2 col-sm-12">
@@ -7,8 +9,7 @@ function Header({ selectedYear }) {
       <div className="col-lg-8 col-md-10 col-sm-12 my-auto">
         <h1>Calculate Tax on Your Salary</h1>
         <p>
-          Calculate income tax on salary as per Govt of Pakistan federal budget{" "}
-          {selectedYear - 1} - {selectedYear}.
+          Calculate income tax on salary as per Govt of Pakistan federal budget.
         </p>
       </div>
     </div>
