@@ -1,5 +1,5 @@
-import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import ButtonIcon from "./ButtonIcon";
+import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 import { useLocalStorageState } from "../hooks/useLocalStorageState";
 
 function DarkModeToggle() {
