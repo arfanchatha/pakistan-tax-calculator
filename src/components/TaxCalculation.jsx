@@ -6,11 +6,17 @@ import CustomPieChart from "./CustomPieChart";
 import TaxDetails from "./TaxDetails";
 import TaxRatesModal from "./TaxRatesModal";
 import TexCalculatorForm from "./TexCalculatorForm";
+import { slabs } from "../data/slabs";
 
 function TaxCalculation() {
   const [value, setValue] = useState("");
   const [salary, setSalary] = useState(0);
-  const [selectedTaxYear, setSelectedTaxYear] = useState(2025);
+  const [selectedTaxYear, setSelectedTaxYear] = useState(function () {
+    const currentYear = Object.entries(slabs).map(([year, _]) =>
+      parseInt(year, 10)
+    );
+    return currentYear[currentYear.length - 1];
+  });
   const [selectedPeriod, setSelectedPeriod] = useState("monthly");
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -65,8 +71,8 @@ function TaxCalculation() {
     <>
       <Header selectedYear={selectedTaxYear} />
 
-      <div className="container py-3">
-        <div className="row text-center mb-4">
+      <div className="container py-1">
+        <div className="row text-center">
           <div className="col-lg-12">
             <TexCalculatorForm
               value={value}

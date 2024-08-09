@@ -42,18 +42,16 @@ function useTaxCalculation(salary, selectedTaxYear) {
     const newResults = {};
 
     recentYears?.forEach((year) => {
-      const { totalTax, slabIndex } = calculateTotalTax(salary, year);
+      const { totalTax = 0, slabIndex } = calculateTotalTax(salary, year);
       newResults[year] = {
         totalTax: Math.round(totalTax),
-        monthlyTax: Math.round(totalTax / 12).toLocaleString(),
+        monthlyTax: Math.round(totalTax / 12),
         taxYear: year,
-        monthlySalary: Math.round(salary / 12).toLocaleString(),
+        monthlySalary: Math.round(salary / 12),
         annualSalary: salary,
-        annualSalaryAfterTax: Math.round(salary - totalTax).toLocaleString(),
+        annualSalaryAfterTax: Math.round(salary - totalTax),
         slabIndex,
-        salaryAfterMonthly: Math.round(
-          salary / 12 - totalTax / 12
-        ).toLocaleString(),
+        salaryAfterMonthly: Math.round(salary / 12 - totalTax / 12),
       };
     });
 

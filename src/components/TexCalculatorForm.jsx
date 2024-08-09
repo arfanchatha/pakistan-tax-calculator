@@ -14,9 +14,9 @@ const TexCalculatorForm = ({
     .sort((a, b) => b - a);
 
   return (
-    <div className="bg-success p-5 rounded">
+    <div className="bg-success px-5 py-3 rounded">
       <form onSubmit={handleSubmit}>
-        <div class="input-group mb-3">
+        <div class="input-group mb-1">
           <input
             required
             autoComplete="false"

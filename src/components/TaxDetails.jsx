@@ -1,7 +1,10 @@
+import useFormattedResults from "../hooks/useFormattedResults";
 import useTaxCalculation from "../hooks/useTaxCalculation";
 
 function TaxDetails({ salary, selectedTaxYear }) {
   const results = useTaxCalculation(salary, selectedTaxYear);
+
+  const fomatedResults = useFormattedResults(results);
 
   const {
     totalTax,
@@ -10,7 +13,7 @@ function TaxDetails({ salary, selectedTaxYear }) {
     annualSalary,
     annualSalaryAfterTax,
     salaryAfterMonthly,
-  } = results[selectedTaxYear] || {};
+  } = fomatedResults[selectedTaxYear] || {};
 
   return (
     <ul className="list-unstyled">
