@@ -9,14 +9,27 @@ const TaxRatesModal = ({ selectedTaxYear, slabIndex, toggleModal }) => {
           <p
             key={index}
             className={
-              index === slabIndex ? "modal modal-background" : "modal "
+              index === slabIndex
+                ? "bg-success rounded p-1 text-justify"
+                : "text-start "
             }
           >
-            {index === slabIndex && <h3>Your current tax slab is </h3>}
-            <strong>{key}</strong>&rarr; <span>{value}</span>
+            {/* {index === slabIndex && <strong>Your current tax slab is </strong>} */}
+            <span>
+              {index === slabIndex ? (
+                <strong>
+                  <u>Your current tax slab is &gt;</u>{" "}
+                </strong>
+              ) : (
+                <span>{index}): </span>
+              )}
+              <strong>{key}</strong>
+            </span>
+            &rarr; <span>{value}</span>
           </p>
         )
       )}
+
       <div className="text-center">
         <button
           className="btn btn-success text-white w-50"

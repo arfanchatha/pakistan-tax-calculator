@@ -8,7 +8,7 @@ const TaxComparisonTable = ({ salary, selectedTaxYear }) => {
   const formatedResults = useFormattedResults(results);
 
   return (
-    <table className="table  table-hover mt-3">
+    <table className="table  table-hover mt-3 ">
       <thead>
         <tr>
           <th className="p-3 mb-2 bg-success text-white">Tax Year</th>

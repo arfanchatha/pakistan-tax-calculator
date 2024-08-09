@@ -97,18 +97,25 @@ function TaxCalculation() {
               >
                 {`View tax rates for ${selectedTaxYear}`}
               </button>
+              <div>
+                {isModalOpen && (
+                  <TaxRatesModal
+                    selectedTaxYear={selectedTaxYear}
+                    slabIndex={slabIndex}
+                    toggleModal={toggleModal}
+                  />
+                )}
+              </div>
             </div>
             <div className="row px-5">
               <div className="col-lg-6 col-md-6 col-sm-12 d-grid item-center shadow p-3 bg-body-tertiary rounded">
                 <TaxDetails selectedTaxYear={selectedTaxYear} salary={salary} />
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12">
-                {salary > 0 && (
-                  <CustomPieChart
-                    annualSalary={annualSalary}
-                    totalTax={totalTax}
-                  />
-                )}
+                <CustomPieChart
+                  annualSalary={annualSalary}
+                  totalTax={totalTax}
+                />
               </div>
             </div>
           </div>
@@ -130,14 +137,6 @@ function TaxCalculation() {
           </div>
         </div>
       </div>
-
-      {isModalOpen && (
-        <TaxRatesModal
-          selectedTaxYear={selectedTaxYear}
-          slabIndex={slabIndex}
-          toggleModal={toggleModal}
-        />
-      )}
     </>
   );
 }

@@ -16,7 +16,7 @@ const TexCalculatorForm = ({
   return (
     <div className="bg-success px-5 py-3 rounded">
       <form onSubmit={handleSubmit}>
-        <div class="input-group mb-1">
+        <div className="input-group mb-1">
           <input
             required
             autoComplete="false"

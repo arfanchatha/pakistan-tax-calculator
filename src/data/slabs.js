@@ -59,7 +59,7 @@ export const slabs = {
     },
     {
       currentSlab: 6000000000000,
-      previousSlab: 600000,
+      previousSlab: 6000000,
       currentRate: 0.35,
     },
   ],

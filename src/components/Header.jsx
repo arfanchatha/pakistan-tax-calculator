@@ -8,8 +8,8 @@ function Header({ selectedYear }) {
           <img
             src="pakistan.png"
             alt="Pakistan Flag"
-            width={160}
-            height={120}
+            width={120}
+            height={100}
           />
         </div>
         <div className="col-lg-6 col-md-6 col-sm-12 my-auto">

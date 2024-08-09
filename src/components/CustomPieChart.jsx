@@ -7,8 +7,8 @@ const CustomPieChart = ({ annualSalary, totalTax }) => {
     { name: "Annual Salary", value: annualSalary },
     { name: "Annual Tax", value: totalTax },
   ];
-  const placeholderData = [{ name: "No Data", value: 1 }];
-  const chartData = data[1].value === undefined ? placeholderData : data;
+  const placeholderData = [{ name: "No Salary", value: 1 }];
+  const chartData = data[0].value === 0 ? placeholderData : data;
 
   return (
     <PieChart width={320} height={300}>
