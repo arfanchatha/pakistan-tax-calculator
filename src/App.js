@@ -1,7 +1,14 @@
 import TaxCalculation from "./components/TaxCalculation";
 
 function App() {
-  return <TaxCalculation />;
+  return (
+    <>
+      <div className="App" id="light">
+        <TaxCalculation />;
+      </div>
+      ;
+    </>
+  );
 }
 
 export default App;

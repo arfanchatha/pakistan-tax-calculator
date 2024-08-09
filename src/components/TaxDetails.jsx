@@ -16,8 +16,8 @@ function TaxDetails({ salary, selectedTaxYear }) {
   } = fomatedResults[selectedTaxYear] || {};
 
   return (
-    <ul className="list-unstyled">
-      <li className="my-2">
+    <ul className="list-unstyled ">
+      <li className="my-2 ">
         <span className="fw-bolder">Monthly income:</span> {monthlySalary}
       </li>
       <li className="my-2">
