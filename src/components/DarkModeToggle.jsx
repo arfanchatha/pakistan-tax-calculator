@@ -10,15 +10,16 @@ function DarkModeToggle() {
     "isDarkMode"
   );
 
+  console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
+
   function hanldeIcon() {
     setIsDarkMode((dark) => !dark);
   }
   useEffect(
     function () {
       const bodyElement = document.querySelector("body");
-      console.log(bodyElement);
 
-      const newTheme = isDarkMode ? "light" : "dark";
+      const newTheme = isDarkMode ? "dark" : "light";
 
       bodyElement.setAttribute("data-bs-theme", `${newTheme}`);
     },
