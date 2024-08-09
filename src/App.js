@@ -3,7 +3,7 @@ import TaxCalculation from "./components/TaxCalculation";
 function App() {
   return (
     <>
-      <TaxCalculation />; ;
+      <TaxCalculation />
     </>
   );
 }
