@@ -3,7 +3,7 @@ import DarkModeToggle from "./DarkModeToggle";
 function Header({ selectedYear }) {
   return (
     <div className="container-fluid">
-      <div className="row bg-light text-center text-md-start">
+      <div className="row  text-center text-md-start">
         <div className="col-lg-4 col-md-2 col-sm-12">
           <img
             src="pakistan.png"
