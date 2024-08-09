@@ -10,7 +10,7 @@ const TaxRatesModal = ({ selectedTaxYear, slabIndex, toggleModal }) => {
             key={index}
             className={
               index === slabIndex
-                ? "bg-success rounded p-1 text-justify"
+                ? "bg-success rounded p-1 text-justify text-dark"
                 : "text-start "
             }
           >
@@ -18,7 +18,7 @@ const TaxRatesModal = ({ selectedTaxYear, slabIndex, toggleModal }) => {
             <span>
               {index === slabIndex ? (
                 <strong>
-                  <u>Your current tax slab is &gt;</u>{" "}
+                  <u className="text-dark">Your current tax slab is &gt; </u>{" "}
                 </strong>
               ) : (
                 <span>{index}): </span>
