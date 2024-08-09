@@ -65,7 +65,7 @@ function TaxCalculation() {
     <>
       <Header selectedYear={selectedTaxYear} />
 
-      <div className="container py-5">
+      <div className="container py-3">
         <div className="row text-center mb-4">
           <div className="col-lg-12">
             <TexCalculatorForm
@@ -80,44 +80,48 @@ function TaxCalculation() {
           </div>
         </div>
 
-        <div className="border border-success rounded my-3 p-3">
-          <div className="text-center mb-3">
-            <h1>Tax year ended {selectedTaxYear}</h1>
-            <button
-              value={`View tax rates for ${selectedTaxYear}`}
-              className="btn btn-success text-white my-4"
-              onClick={toggleModal}
-            >
-              {`View tax rates for ${selectedTaxYear}`}
-            </button>
-          </div>
-          <div className="row px-5">
-            <div className="col-lg-6 col-md-6 col-sm-12 d-grid item-center shadow p-3 bg-body-tertiary rounded">
-              <TaxDetails selectedTaxYear={selectedTaxYear} salary={salary} />
+        <div className="d-md-flex d-sm-flex justify-content-between">
+          <div className="border border-success rounded my-3 mx-1 p-3 w-100">
+            <div className="text-center mb-3">
+              <h1>Tax year ended {selectedTaxYear}</h1>
+              <button
+                value={`View tax rates for ${selectedTaxYear}`}
+                className="btn btn-success text-white my-4"
+                onClick={toggleModal}
+              >
+                {`View tax rates for ${selectedTaxYear}`}
+              </button>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12">
-              {salary > 0 && (
-                <CustomPieChart
-                  annualSalary={annualSalary}
-                  totalTax={totalTax}
+            <div className="row px-5">
+              <div className="col-lg-6 col-md-6 col-sm-12 d-grid item-center shadow p-3 bg-body-tertiary rounded">
+                <TaxDetails selectedTaxYear={selectedTaxYear} salary={salary} />
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-12">
+                {salary > 0 && (
+                  <CustomPieChart
+                    annualSalary={annualSalary}
+                    totalTax={totalTax}
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="border border-success rounded d-flex justify-content-center align-items-center my-3 mx-1 p-3 w-100">
+            <div>
+              <h2 className="text-center">Comparison to other years</h2>
+              {salary ? (
+                <TaxComparisonTable
+                  salary={salary}
+                  selectedTaxYear={selectedTaxYear}
                 />
+              ) : (
+                <p className="text-center">
+                  Please enter the amount to compare with other years
+                </p>
               )}
             </div>
           </div>
-        </div>
-
-        <div className="border border-success rounded my-3 p-3">
-          <h2 className="text-center">Comparison to other years</h2>
-          {salary ? (
-            <TaxComparisonTable
-              salary={salary}
-              selectedTaxYear={selectedTaxYear}
-            />
-          ) : (
-            <p className="text-center">
-              Please enter the amount to compare with other years
-            </p>
-          )}
         </div>
       </div>
 
