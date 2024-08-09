@@ -70,7 +70,7 @@ const TexCalculatorForm = ({
             >
               {taxYears.map((year) => (
                 <option value={year} key={year}>
-                  Tax year: {year}
+                  {year - 1} {year}
                 </option>
               ))}
             </select>

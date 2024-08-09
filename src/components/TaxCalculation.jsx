@@ -63,7 +63,7 @@ function TaxCalculation() {
 
   return (
     <>
-      <Header />
+      <Header selectedYear={selectedTaxYear} />
 
       <div className="container py-5">
         <div className="row text-center mb-4">
