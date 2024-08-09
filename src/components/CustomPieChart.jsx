@@ -11,7 +11,7 @@ const CustomPieChart = ({ annualSalary, totalTax }) => {
   const chartData = data[0].value === 0 ? placeholderData : data;
 
   return (
-    <PieChart width={320} height={300}>
+    <PieChart width={320} height={280}>
       <Pie
         data={chartData}
         dataKey="value"
@@ -21,7 +21,7 @@ const CustomPieChart = ({ annualSalary, totalTax }) => {
         outerRadius={100}
         labelLine={true}
         label={({ percent }) => ` ${(percent * 100).toFixed(0)}%`}
-        paddingAngle={5}
+        paddingAngle={0.01}
         fill="#8884d8"
       >
         {chartData.map((entry, index) => (

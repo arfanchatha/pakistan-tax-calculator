@@ -88,11 +88,11 @@ function TaxCalculation() {
 
         <div className="d-md-flex d-sm-flex justify-content-between">
           <div className="border border-success rounded my-3 mx-1 p-3 w-100">
-            <div className="text-center mb-3">
+            <div className="text-center mb-2">
               <h1>Tax year ended {selectedTaxYear}</h1>
               <button
                 value={`View tax rates for ${selectedTaxYear}`}
-                className="btn btn-success text-white my-4"
+                className="btn btn-success text-white my-2"
                 onClick={toggleModal}
               >
                 {`View tax rates for ${selectedTaxYear}`}
@@ -107,7 +107,7 @@ function TaxCalculation() {
                 )}
               </div>
             </div>
-            <div className="row px-5">
+            <div className="row pr-5 ps-3">
               <div className="col-lg-6 col-md-6 col-sm-12 d-grid item-center shadow p-3 bg-body-tertiary rounded">
                 <TaxDetails selectedTaxYear={selectedTaxYear} salary={salary} />
               </div>

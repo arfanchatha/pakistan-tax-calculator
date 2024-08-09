@@ -1,18 +1,18 @@
 import { useMemo } from "react";
 
-/**
- * Custom hook to format numeric values in a data object.
- * @param {Object} data - The data object to format.
- * @returns {Object} The formatted data object.
- */
 const useFormattedResults = (data) => {
   return useMemo(() => {
     if (!data) return {};
 
+    // Function to format numbers, with special handling for zero
     const formatNumber = (value) => {
-      return typeof value === "number" ? value.toLocaleString() : value;
+      if (typeof value === "number") {
+        return value === 0 ? "-" : value.toLocaleString();
+      }
+      return value;
     };
 
+    // Function to recursively format nested objects
     const formatData = (obj) => {
       return Object.keys(obj).reduce((acc, key) => {
         const value = obj[key];

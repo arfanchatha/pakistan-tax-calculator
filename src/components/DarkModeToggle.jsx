@@ -10,8 +10,6 @@ function DarkModeToggle() {
     "isDarkMode"
   );
 
-  console.log(window.matchMedia("(prefers-color-scheme: dark)").matches);
-
   function hanldeIcon() {
     setIsDarkMode((dark) => !dark);
   }

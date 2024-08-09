@@ -1,0 +1,48 @@
+/* Default styling for larger screens */
+h1 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+img.flag {
+  width: 120px;
+  height: 100px;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  p {
+    display: none;
+  }
+
+  img.flag {
+    width: 60px;
+    height: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .col-auto.text-end {
+    text-align: right;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+
+  .container {
+    padding-top: 20px;
+  }
+
+  .row {
+    justify-content: center;
+    align-items: center;
+  }
+}

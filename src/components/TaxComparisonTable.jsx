@@ -40,18 +40,18 @@ const TaxComparisonTable = ({ salary, selectedTaxYear }) => {
           ))}
         </tr>
         <tr>
-          <td>Annual Tax</td>
-          {years.map((year) => (
-            <td className="text-center" key={`${year}-totalTax`}>
-              {formatedResults[year].totalTax}
-            </td>
-          ))}
-        </tr>
-        <tr>
           <td>Annual Salary</td>
           {years.map((year) => (
             <td className="text-center" key={`${year}-annualSalary`}>
               {formatedResults[year].annualSalary}
+            </td>
+          ))}
+        </tr>
+        <tr>
+          <td>Annual Tax</td>
+          {years.map((year) => (
+            <td className="text-center" key={`${year}-totalTax`}>
+              {formatedResults[year].totalTax}
             </td>
           ))}
         </tr>
