@@ -5,13 +5,18 @@ import { useEffect } from "react";
 
 function DarkModeToggle() {
   // const { isDarkMode, toggleDarkMode } = useDarkMode();
-  const [isDarkMode, setIsDarkMode] = useLocalStorageState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches,
-    "isDarkMode"
-  );
+  const initialState = window.matchMedia(
+    "(prefers-color-scheme: dark)"
+  ).matches;
+  const key = "isDarkMode";
+
+  console.log("initaialState: ", initialState);
+  const [isDarkMode, setIsDarkMode] = useLocalStorageState(initialState, key);
 
   function hanldeIcon() {
     setIsDarkMode((dark) => !dark);
+
+    localStorage.setItem(key, JSON.stringify(isDarkMode));
   }
   useEffect(
     function () {
