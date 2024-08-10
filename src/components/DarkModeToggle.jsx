@@ -10,7 +10,6 @@ function DarkModeToggle() {
   ).matches;
   const key = "isDarkMode";
 
-  console.log("initaialState: ", initialState);
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(initialState, key);
 
   function hanldeIcon() {
