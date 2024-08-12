@@ -104,6 +104,7 @@ function TaxCalculation() {
                     selectedTaxYear={selectedTaxYear}
                     slabIndex={slabIndex}
                     toggleModal={toggleModal}
+                    open={isModalOpen}
                   />
                 )}
               </div>
@@ -117,7 +118,6 @@ function TaxCalculation() {
                   annualSalary={annualSalary}
                   totalTax={totalTax}
                 />
-                {/* <Example /> */}
               </div>
             </div>
           </div>
