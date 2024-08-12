@@ -59,14 +59,7 @@ const TaxRatesModal = ({ selectedTaxYear, slabIndex, toggleModal, open }) => {
                 )
               )}
             </div>
-            <div className="modal-footer">
-              <button
-                className="btn btn-success text-white w-100"
-                onClick={toggleModal}
-              >
-                Close
-              </button>
-            </div>
+            <div className="modal-footer"></div>
           </div>
         </div>
       </div>

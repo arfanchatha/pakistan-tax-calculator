@@ -46,6 +46,7 @@ function TaxCalculation() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!value) return;
 
     const valueNew = value.split(",").join("");
     const numericValue = Number(valueNew);

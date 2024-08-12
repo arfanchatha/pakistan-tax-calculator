@@ -13,9 +13,10 @@ function DarkModeToggle() {
   const [isDarkMode, setIsDarkMode] = useLocalStorageState(initialState, key);
 
   function hanldeIcon() {
-    setIsDarkMode((dark) => !dark);
+    const newDarkModeState = !isDarkMode;
 
-    localStorage.setItem(key, JSON.stringify(isDarkMode));
+    setIsDarkMode((dark) => !dark);
+    localStorage.setItem(key, JSON.stringify(newDarkModeState));
   }
   useEffect(
     function () {
