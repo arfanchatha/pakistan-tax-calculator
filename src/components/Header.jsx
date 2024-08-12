@@ -16,7 +16,7 @@ function Header({ selectedYear }) {
         </div>
         <div className="col text-center">
           <h1>Calculate Tax on Your Salary</h1>
-          <p>
+          <p className="header-detail">
             Calculate income tax on salary as per Govt of Pakistan federal
             budget {selectedYear - 1} - {selectedYear}.
           </p>
