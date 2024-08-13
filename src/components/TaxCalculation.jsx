@@ -23,7 +23,8 @@ function TaxCalculation() {
 
   const results = useTaxCalculation(salary, selectedTaxYear);
 
-  const { totalTax, annualSalary, slabIndex } = results[selectedTaxYear] || {};
+  const { totalTax, annualSalaryAfterTax, slabIndex } =
+    results[selectedTaxYear] || {};
 
   const handleValueChange = (e) => {
     const rawValue = e.target.value.replace(/,/g, "");
@@ -116,7 +117,7 @@ function TaxCalculation() {
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12">
                 <CustomPieChart
-                  annualSalary={annualSalary}
+                  annualSalary={annualSalaryAfterTax}
                   totalTax={totalTax}
                 />
               </div>

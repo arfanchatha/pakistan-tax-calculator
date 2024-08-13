@@ -2,9 +2,9 @@ import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
 
 const COLORS = ["#00C49F", "#FF8042", "#FFBB28", "#0088FE"];
 
-const CustomPieChart = ({ annualSalary, totalTax }) => {
+const CustomPieChart = ({ annualSalaryAfterTax, totalTax }) => {
   const data = [
-    { name: "Annual Salary", value: annualSalary },
+    { name: "Annual Salary", value: annualSalaryAfterTax },
     { name: "Annual Tax", value: totalTax },
   ];
   const placeholderData = [{ name: "No Salary", value: 1 }];
