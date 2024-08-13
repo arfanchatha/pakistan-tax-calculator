@@ -117,7 +117,7 @@ function TaxCalculation() {
               </div>
               <div className="col-lg-6 col-md-6 col-sm-12">
                 <CustomPieChart
-                  annualSalary={annualSalaryAfterTax}
+                  annualSalaryAfterTax={annualSalaryAfterTax}
                   totalTax={totalTax}
                 />
               </div>
