@@ -24,7 +24,7 @@ function TaxDetails({ salary, selectedTaxYear }) {
         </tr>
         <tr>
           <td>Monthly tax:</td>
-          <td>{monthlyTax}</td>
+          <td className="text-warning font-italic">{monthlyTax}</td>
         </tr>
         <tr>
           <td>Monthly salary after tax:</td>
@@ -36,7 +36,7 @@ function TaxDetails({ salary, selectedTaxYear }) {
         </tr>
         <tr>
           <td>Annual tax:</td>
-          <td>{totalTax}</td>
+          <td className="text-warning font-italic">{totalTax}</td>
         </tr>
         <tr>
           <td>Annual salary after tax:</td>
@@ -44,28 +44,6 @@ function TaxDetails({ salary, selectedTaxYear }) {
         </tr>
       </tbody>
     </table>
-    // <ul className="list-unstyled ">
-    //   <li className="my-2 ">
-    //     <span className="fw-bolder">Monthly income:</span> {monthlySalary}
-    //   </li>
-    //   <li className="my-2">
-    //     <span className="fw-bolder">Monthly tax:</span> {monthlyTax}
-    //   </li>
-    //   <li className="my-2">
-    //     <span className="fw-bolder">Salary after tax monthly:</span>{" "}
-    //     {salaryAfterMonthly}
-    //   </li>
-    //   <li className="my-2">
-    //     <span className="fw-bolder">Annual salary:</span> {annualSalary}
-    //   </li>
-    //   <li className="my-2">
-    //     <span className="fw-bolder">Annual tax:</span> {totalTax}
-    //   </li>
-    //   <li className="">
-    //     <span className="fw-bolder">Annual salary after tax:</span>{" "}
-    //     {annualSalaryAfterTax}
-    //   </li>
-    // </ul>
   );
 }
 
