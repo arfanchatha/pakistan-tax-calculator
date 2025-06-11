@@ -1,4 +1,12 @@
 export const taxRatesDetails = {
+  2026: {
+  "Upto 600,000": "0%",
+  "600,001 - 1,200,000": "2.5% of the amount exceeding PKR 600,000",
+  "1,200,001 - 2,200,000": "PKR 15,000 + 11% of the amount exceeding PKR 1,200,000",
+  "2,200,001 - 3,200,000": "PKR 125,000 + 23% of the amount exceeding PKR 2,200,000",
+  "3,200,001 - 4,100,000": "PKR 355,000 + 30% of the amount exceeding PKR 3,200,000",
+  "Above 4,100,000": "PKR 625,000 + 35% of the amount exceeding PKR 4,100,000"
+},
   2025: {
     "Upto 600,000": "0%",
     "600,000 - 1,200,000": "5% of the amount exceeding Rs. 600,000",
