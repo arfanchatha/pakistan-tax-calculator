@@ -1,4 +1,36 @@
 export const slabs = {
+  2026: [
+  {
+    currentSlab: 600000,
+    previousSlab: 0,
+    currentRate: 0,
+  },
+  {
+    currentSlab: 1200000,
+    previousSlab: 600000,
+    currentRate: 0.025,
+  },
+  {
+    currentSlab: 2200000,
+    previousSlab: 1200000,
+    currentRate: 0.11,
+  },
+  {
+    currentSlab: 3200000,
+    previousSlab: 2200000,
+    currentRate: 0.23,
+  },
+  {
+    currentSlab: 4100000,
+    previousSlab: 3200000,
+    currentRate: 0.3,
+  },
+  {
+    currentSlab: 6000000000000,
+    previousSlab: 4100000,
+    currentRate: 0.35,
+  },
+],
   2025: [
     {
       currentSlab: 600000,
